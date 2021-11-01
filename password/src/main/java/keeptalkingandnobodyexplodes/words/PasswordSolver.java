@@ -36,15 +36,15 @@ public class PasswordSolver {
         return Integer.parseInt(position) - 1;
     }
 
-    public static List<String> solve(String parameters) {
+    public static Set<String> solve(String parameters) {
         List<Predicate<String>> predicates = parsePredicates(parameters);
         return collectFittingPasswords(predicates);
     }
 
-    private static List<String> collectFittingPasswords(List<Predicate<String>> predicates) {
+    private static Set<String> collectFittingPasswords(List<Predicate<String>> predicates) {
         return words.stream()
                 .filter(word -> fitsPredicates(predicates, word))
-                .collect(Collectors.toList());
+                .collect(Collectors.toSet());
     }
 
     private static boolean fitsPredicates(List<Predicate<String>> predicates, String word) {
