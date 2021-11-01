@@ -2,7 +2,7 @@ package keeptalkingandnobodyexplodes;
 
 import keeptalkingandnobodyexplodes.words.WordsSolver;
 
-public class Main {
+public class WordSolverApplication {
 
     public static void main(String[] args) {
         WordsSolver solver = new WordsSolver();
