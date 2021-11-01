@@ -1,5 +1,5 @@
-/words/target/*
 /.idea/*
 /target/*
 /out/*
 *.iml
+*/target/*

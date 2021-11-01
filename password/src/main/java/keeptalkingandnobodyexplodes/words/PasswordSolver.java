@@ -6,7 +6,7 @@ import java.util.Set;
 import java.util.function.Predicate;
 import java.util.stream.Collectors;
 
-public class WordsSolver {
+public class PasswordSolver {
 
     private static final Set<String> words = Set.of("alarm", "apacz", "arena", "babka", "cecha", "ekipa",
             "fajka", "farma", "głowa", "hańba", "larwa", "laska", "macka", "obiad", "palec", "palma", "pegaz",
@@ -33,13 +33,15 @@ public class WordsSolver {
 
     private static int getPosition(String lettersOnPosition) {
         String position = lettersOnPosition.split(":")[0];
-
-        return Integer.parseInt(position)-1;
+        return Integer.parseInt(position) - 1;
     }
 
     public static List<String> solve(String parameters) {
         List<Predicate<String>> predicates = parsePredicates(parameters);
+        return collectFittingPasswords(predicates);
+    }
 
+    private static List<String> collectFittingPasswords(List<Predicate<String>> predicates) {
         return words.stream()
                 .filter(word -> fitsPredicates(predicates, word))
                 .collect(Collectors.toList());

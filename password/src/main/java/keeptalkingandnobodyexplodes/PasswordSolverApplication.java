@@ -1,11 +1,11 @@
 package keeptalkingandnobodyexplodes;
 
-import keeptalkingandnobodyexplodes.words.WordsSolver;
+import keeptalkingandnobodyexplodes.words.PasswordSolver;
 
 public class PasswordSolverApplication {
 
     public static void main(String[] args) {
-        WordsSolver solver = new WordsSolver();
+        PasswordSolver solver = new PasswordSolver();
 
         while (true) {
 

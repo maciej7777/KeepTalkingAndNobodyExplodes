@@ -7,7 +7,7 @@ import java.util.List;
 
 import static org.testng.Assert.assertEquals;
 
-public class WordsSolverTest {
+public class PasswordSolverTest {
 
 
     @DataProvider
@@ -22,6 +22,6 @@ public class WordsSolverTest {
 
     @Test(dataProvider = "inputQueryAndExpectedOutput")
     public void testSolve(String input, List<String> expectedOutput) {
-        assertEquals(WordsSolver.solve(input), expectedOutput);
+        assertEquals(PasswordSolver.solve(input), expectedOutput);
     }
 }
